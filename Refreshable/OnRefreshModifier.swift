@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-import Introspect
-
+import SwiftUIIntrospect
 
 extension UIScrollView {
 	
@@ -51,7 +50,7 @@ struct OnListRefreshModifier: ViewModifier {
 	
 	func body(content: Content) -> some View {
 		content
-			.introspectTableView { tableView in
+            .introspect(.scrollView, on: .iOS( .v15, .v16, .v17)) { tableView in
 				tableView.onRefresh(onValueChanged)
 			}
 	}
