@@ -18,7 +18,7 @@ let package = Package(
 		.package(
 			name: "Introspect",
 			url: "https://github.com/siteline/SwiftUI-Introspect.git",
-			.upToNextMajor(from: "1.0.0")
+			.exact: "1.0.0"
 		)
     ],
     targets: [
